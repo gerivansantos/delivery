@@ -34,9 +34,8 @@ spring:
         driverClassName: org.postgresql.Driver
     
     jpa:    
-        database-platform: org.hibernate.dialect.PostgreSQL9Dialect
-        generate-ddl: false
+        database: POSTGRESQL
+        show-sql: true
         hibernate:
-          jdbc:            
-            ddl-auto: create-drop
-        show-sql: true       
+          ddl-auto: create-drop           
+ 
