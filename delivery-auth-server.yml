@@ -39,7 +39,6 @@ spring:
         hibernate:
           jdbc:
             lob:
-              non-contextual-creation: ture
+              non-contextual-creation: true
             ddl-auto: create-drop
-        show-sql: true
-        
+        show-sql: true       
