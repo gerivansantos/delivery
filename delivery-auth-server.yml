@@ -35,7 +35,11 @@ spring:
     
     jpa:    
         database: POSTGRESQL
+        database-platform; org.hibernate.dialect.PostgreSQL9Dialect
         show-sql: true
         hibernate:
-          ddl-auto: create-drop           
+          ddl-auto: create-drop    
+          temp:
+            use_jdbc_metadata_defaults: false
+
  
