@@ -37,8 +37,6 @@ spring:
         database-platform: org.hibernate.dialect.PostgreSQL9Dialect
         generate-ddl: false
         hibernate:
-          jdbc:
-            lob:
-              non-contextual-creation: true
+          jdbc:            
             ddl-auto: create-drop
         show-sql: true       
