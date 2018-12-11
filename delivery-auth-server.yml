@@ -33,8 +33,7 @@ spring:
         password: postgres
         driverClassName: org.postgresql.Driver
     
-    jpa:    
-        database: POSTGRESQL
+    jpa:  
         database-platform; org.hibernate.dialect.PostgreSQL9Dialect
         show-sql: true
         hibernate:
