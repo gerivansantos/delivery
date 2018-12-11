@@ -25,6 +25,8 @@ security:
 
 spring:
     datasource:
+        data: classpath:/sql/data.sql
+        schema: classpath:/sql/schema.sql
         platform: postgres
         url: jdbc:postgresql://localhost:5432/oauth
         username: postgres
