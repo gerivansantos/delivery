@@ -31,7 +31,7 @@ spring:
         url: jdbc:postgresql://localhost:5432/oauth
         username: postgres
         password: postgres
-        driverClassName: org.postgresql.Driver
+        driver-class-name: org.postgresql.Driver
     
     jpa:  
         database: POSTGRESQL
@@ -41,5 +41,3 @@ spring:
           ddl-auto: create-drop    
           temp:
             use_jdbc_metadata_defaults: false
-
- 
