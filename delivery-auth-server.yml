@@ -21,23 +21,21 @@ security:
             client-id: coderef
             client-secret: $2a$10$p9Pk0fQNAQSesI4vuvKA0OZanDD2
             resource-ids: resources
-            scope: read,write
+            scope: read,write           
 
 spring:
     datasource:
-        data: classpath:/sql/data.sql
-        schema: classpath:/sql/schema.sql
-        platform: postgres
-        url: jdbc:postgresql://localhost:5432/oauth
-        username: postgres
-        password: postgres
-        driver-class-name: org.postgresql.Driver
+      driver-class-name: org.postgresql.Driver
+      url: jdbc:postgresql://localhost:5432/oauth?createDatabaseIfNotExist=true
+      username: postgres
+      password: postgres
+  # JPA properties
+    jpa:
+      hibernate:
+        ddl-auto: none
+      show-sql: true
+      database: postgresql
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
+      open-in-view: false
+      generate-ddl: false
     
-    jpa:  
-        database: POSTGRESQL
-        database-platform: org.hibernate.dialect.PostgreSQL9Dialect
-        show-sql: true
-        hibernate:
-          ddl-auto: create-drop    
-          temp:
-            use_jdbc_metadata_defaults: false
