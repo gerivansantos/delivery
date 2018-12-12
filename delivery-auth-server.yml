@@ -31,11 +31,13 @@ spring:
       password: postgres
   # JPA properties
     jpa:
-      hibernate:
-        ddl-auto: none
-      show-sql: true
-      database: postgresql
-      database-platform: org.hibernate.dialect.PostgreSQLDialect
-      open-in-view: false
-      generate-ddl: false
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.PostgreSQLDialect
+          ddl-auto: update
+        show-sql: true
+        database: postgresql
+        open-in-view: false
+        generate-ddl: false   
+  
     
